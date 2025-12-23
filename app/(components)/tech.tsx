@@ -21,8 +21,8 @@ export default function Tech() {
           <div className='flex flex-col gap-2'>
             <div>React, Node & JavaScript</div>
             <div className='text-sm text-muted-foreground'>
-              I build fast, responsive interfaces with React and connect them to
-              clean, maintainable APIs using modern JavaScript and Node.
+              I build fast, responsive interfaces with React and modern
+              JavaScript — optimized for real users, not just pretty UIs.
             </div>
           </div>
         </div>
@@ -31,8 +31,8 @@ export default function Tech() {
           <div className='flex flex-col gap-2'>
             <div>Laravel & PHP</div>
             <div className='text-sm text-muted-foreground'>
-              I design robust backends with Laravel — from authentication and
-              REST APIs to business logic and database design.
+              I design robust backends with Laravel — handling authentication,
+              REST APIs, and complex business logic used by thousands of users.
             </div>
           </div>
         </div>
@@ -41,8 +41,8 @@ export default function Tech() {
           <div className='flex flex-col gap-2'>
             <div>Vercel & NGINX Service</div>
             <div className='text-sm text-muted-foreground'>
-              I deploy and optimize apps on Vercel and NGINX, focusing on
-              performance, reliability, and smooth CI/CD workflows.
+              I deploy and optimize apps on Vercel and NGINX — with simple,
+              reliable pipelines from code push to production.
             </div>
           </div>
         </div>
