@@ -1,5 +1,6 @@
 import {
   IconBrandGithub,
+  IconBrandGmail,
   IconBrandInstagram,
   IconBrandLinkedin,
 } from '@tabler/icons-react';
@@ -34,6 +35,10 @@ export default function Home() {
               target='_blank'
             >
               <IconBrandInstagram />
+            </Link>
+
+            <Link href={'mailto:hafizardiansyah@gmail.com'} target='_blank'>
+              <IconBrandGmail />
             </Link>
           </div>
         </div>
