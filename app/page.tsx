@@ -1,12 +1,13 @@
 import {
-  IconBrandLaravel,
-  IconBrandReact,
-  IconBrandVercel,
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
 } from '@tabler/icons-react';
 import Experiences from './(components)/experiences';
-import Projects from './(components)/projects';
 import Introduction from './(components)/introduction';
+import Projects from './(components)/projects';
 import Tech from './(components)/tech';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -16,6 +17,26 @@ export default function Home() {
         <Tech />
         <Experiences />
         <Projects />
+        <div className='h-full flex justify-between items-center w-full'>
+          <div>Crafted By Muhammad Hafiz Ardiansyah</div>
+          <div className='flex gap-3 items-center'>
+            <Link
+              href={'https://www.linkedin.com/in/muhammad-hafiz-ardiansyah/'}
+              target='_blank'
+            >
+              <IconBrandLinkedin />
+            </Link>
+            <Link href={'https://github.com/hafizardiansyah'} target='_blank'>
+              <IconBrandGithub />
+            </Link>
+            <Link
+              href={'https://www.instagram.com/muhammadhafiz.a/'}
+              target='_blank'
+            >
+              <IconBrandInstagram />
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   );

@@ -1,6 +1,7 @@
 'use client';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const MotionCard = motion(Card);
 
@@ -11,18 +12,21 @@ export default function Projects() {
       description:
         'Revamp DigiVerse version 1 with enhancement of business proposal and technology',
       flag: 'Landing Page',
+      link: 'https://www.merakihouseschool.com/',
     },
     {
       name: 'DigiVerse 2.0',
       description:
         'Revamp DigiVerse version 1 with enhancement of business proposal and technology',
       flag: 'Learning Management System',
+      link: 'https://digiverse-beta.telkom.co.id',
     },
     {
       name: 'DigiVerse 1.0',
       description:
         'Developing LMS Website for Telkom Corporate University using Laravel and REST API',
       flag: 'Learning Management System',
+      link: 'https://digiverse.telkom.co.id/',
     },
     {
       name: 'Backend ICACB Telkomsel',
@@ -79,21 +83,23 @@ export default function Projects() {
             whileTap={{ scale: 0.99 }}
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
           >
-            <CardContent className='flex flex-col justify-between gap-5 px-3'>
-              <div className='flex flex-col gap-2'>
-                <div className='flex gap-2 items-center'>
-                  <div className='text-sm flex-1 font-semibold'>
-                    {project.name}
+            <Link href={project.link ?? ''} target='_blank'>
+              <CardContent className='flex flex-col justify-between gap-5 px-3'>
+                <div className='flex flex-col gap-2'>
+                  <div className='flex gap-2 items-center'>
+                    <div className='text-sm flex-1 font-semibold'>
+                      {project.name}
+                    </div>
+                  </div>
+                  <div className='text-sm line-clamp-2'>
+                    {project.description}
                   </div>
                 </div>
-                <div className='text-sm line-clamp-2'>
-                  {project.description}
+                <div className='flex gap-0.5 items-center text-sm font-light'>
+                  {project.flag}
                 </div>
-              </div>
-              <div className='flex gap-0.5 items-center text-sm font-light'>
-                {project.flag}
-              </div>
-            </CardContent>
+              </CardContent>
+            </Link>
           </MotionCard>
         ))}
       </div>
