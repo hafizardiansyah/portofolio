@@ -1,5 +1,6 @@
 'use client';
 import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -75,33 +76,46 @@ export default function Projects() {
     <div className='space-y-5 w-full pb-10'>
       <div className=''>PROJECTS</div>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
-        {projects.map((project, index) => (
-          <MotionCard
-            key={index}
-            className='rounded-1 py-3 cursor-pointer'
-            whileHover={{ scale: 1.03, y: -4 }}
-            whileTap={{ scale: 0.99 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-          >
-            <Link href={project.link ?? ''} target='_blank'>
-              <CardContent className='flex flex-col justify-between gap-5 px-3'>
-                <div className='flex flex-col gap-2'>
-                  <div className='flex gap-2 items-center'>
-                    <div className='text-sm flex-1 font-semibold'>
-                      {project.name}
-                    </div>
-                  </div>
-                  <div className='text-sm line-clamp-2'>
-                    {project.description}
+        {projects.map((project, index) => {
+          const hasLink = !!project.link;
+          const content = (
+            <CardContent className='flex flex-col justify-between gap-5 px-3'>
+              <div className='flex flex-col gap-2'>
+                <div className='flex gap-2 items-center'>
+                  <div className='text-sm flex-1 font-semibold'>
+                    {project.name}
                   </div>
                 </div>
-                <div className='flex gap-0.5 items-center text-sm font-light'>
-                  {project.flag}
+                <div className='text-sm line-clamp-2'>
+                  {project.description}
                 </div>
-              </CardContent>
-            </Link>
-          </MotionCard>
-        ))}
+              </div>
+              <div className='flex gap-0.5 items-center text-sm font-light'>
+                {project.flag}
+              </div>
+            </CardContent>
+          );
+
+          return (
+            <MotionCard
+              className={cn(
+                'rounded-1 py-3',
+                hasLink && 'cursor-pointer' // hanya pointer kalau ada link
+              )}
+              whileHover={{ scale: 1.03, y: -4 }}
+              whileTap={{ scale: 0.99 }}
+              key={index}
+            >
+              {hasLink ? (
+                <Link href={project.link!} target='_blank' rel='noreferrer'>
+                  {content}
+                </Link>
+              ) : (
+                content
+              )}
+            </MotionCard>
+          );
+        })}
       </div>
     </div>
   );
