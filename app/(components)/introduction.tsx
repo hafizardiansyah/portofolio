@@ -7,7 +7,7 @@ export default function Introduction() {
       <TypingText
         text={[
           "Hello, I'm Hafiz.",
-          'Frontend Developer',
+          'Frontend Developer.',
           'I build fast, reliable web apps.',
         ]}
         typingSpeed={75}
