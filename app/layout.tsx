@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Hafiz | Frontend Developer',
+  title: 'Hafiz Ardiansyah | Frontend Developer (React, Next.js, Laravel)',
   description: `I'm Hafiz, a Frontend Developer specializing in building fast, reliable web applications. Explore my projects and experience.`,
 };
 
