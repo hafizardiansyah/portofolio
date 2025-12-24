@@ -1,6 +1,5 @@
 'use client';
 import { Card, CardContent } from '@/components/ui/card';
-import { motion } from 'framer-motion';
 import {
   IconApi,
   IconBrandCss3,
@@ -13,14 +12,13 @@ import {
   IconBrandPhp,
   IconBrandPrisma,
   IconBrandReact,
-  IconBrandReactNative,
   IconBrandSupabase,
   IconBrandTailwind,
   IconBrandTypescript,
   IconBrandVercel,
-  IconCalculator,
   IconServer,
 } from '@tabler/icons-react';
+import { motion } from 'framer-motion';
 
 const MotionCard = motion(Card);
 
