@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Hafiz Ardiansyah | Frontend Developer (React, Next.js, Laravel)',
+  title: 'Hafiz Ardiansyah',
   description:
     'Hafiz Ardiansyah, a Frontend Developer specializing in building fast, reliable web applications with React, Next.js, and Laravel.',
   openGraph: {
-    title: 'Hafiz Ardiansyah | Frontend Developer',
+    title: 'Hafiz Ardiansyah',
     description:
       'Portfolio of Hafiz Ardiansyah, a frontend developer focused on React, Next.js, and Laravel.',
     url: 'https://hafizardiansyah.my.id',
@@ -35,7 +35,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Muhammad Hafiz Ardiansyah',
+    name: 'Hafiz Ardiansyah',
     alternateName: 'Hafiz Ardiansyah',
     url: 'https://hafizardiansyah.my.id',
     jobTitle: 'Frontend Developer',
