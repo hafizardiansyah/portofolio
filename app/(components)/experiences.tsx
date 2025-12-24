@@ -20,7 +20,7 @@ import {
 } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
 interface Experience {
   name: string;

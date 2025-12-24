@@ -8,9 +8,11 @@ export default function Tech() {
   return (
     <section aria-labelledby='tech-heading'>
       <div className='space-y-5 max-w-6xl pb-10'>
-        <div className='text-4xl'>
+        <div className='text-2xl md:text-4xl'>
           I solve problems with{' '}
-          <span className='italic text-5xl'>React, Laravel, and Vercel</span>
+          <span className='italic text-3xl md:text-5xl'>
+            React, Laravel, and Vercel
+          </span>
         </div>
         <div>
           I design and ship reliable web experiences end-to-end – from intuitive

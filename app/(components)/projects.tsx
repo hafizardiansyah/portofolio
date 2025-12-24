@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const MotionCard = motion(Card);
+const MotionCard = motion.create(Card);
 
 export default function Projects() {
   const projects = [

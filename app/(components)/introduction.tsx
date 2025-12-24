@@ -8,13 +8,13 @@ export default function Introduction() {
         text={[
           "Hello, I'm Hafiz.",
           'Frontend Developer.',
-          'I build fast, reliable web apps.',
+          'Fast, reliable web apps.',
         ]}
         typingSpeed={75}
         pauseDuration={1500}
         showCursor={true}
         cursorCharacter='|'
-        className='text-6xl font-bold'
+        className='text-3xl md:text-6xl font-bold'
         textColors={['#38bdf8', '#a855f7', '#facc15']}
         variableSpeed={{ min: 50, max: 120 }}
       />
