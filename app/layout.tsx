@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Hafiz Ardiansyah | Frontend Developer (React, Next.js, Laravel)',
   description:
-    "I'm Hafiz, a Frontend Developer specializing in building fast, reliable web applications with React, Next.js, and Laravel.",
+    'Hafiz Ardiansyah, a Frontend Developer specializing in building fast, reliable web applications with React, Next.js, and Laravel.',
   openGraph: {
     title: 'Hafiz Ardiansyah | Frontend Developer',
     description:
