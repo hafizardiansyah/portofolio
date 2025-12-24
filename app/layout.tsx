@@ -14,7 +14,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Hafiz Ardiansyah | Frontend Developer (React, Next.js, Laravel)',
-  description: `I'm Hafiz, a Frontend Developer specializing in building fast, reliable web applications. Explore my projects and experience.`,
+  description:
+    "I'm Hafiz, a Frontend Developer specializing in building fast, reliable web applications with React, Next.js, and Laravel.",
+  openGraph: {
+    title: 'Hafiz Ardiansyah | Frontend Developer',
+    description:
+      'Portfolio of Hafiz Ardiansyah, a frontend developer focused on React, Next.js, and Laravel.',
+    url: 'https://hafizardiansyah.my.id',
+    siteName: 'hafizardiansyah.my.id',
+    type: 'website',
+    // images: []  // boleh dikosongin / dihapus dulu
+  },
 };
 
 export default function RootLayout({

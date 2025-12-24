@@ -14,9 +14,11 @@ export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Hafiz Ardiansyah',
+    name: 'Muhammad Hafiz Ardiansyah',
+    alternateName: 'Hafiz Ardiansyah',
     url: 'https://hafizardiansyah.my.id',
     jobTitle: 'Frontend Developer',
+    headline: 'Frontend Developer specializing in React, Next.js, and Laravel',
     sameAs: [
       'https://github.com/hafizardiansyah',
       'https://www.linkedin.com/in/muhammad-hafiz-ardiansyah',
