@@ -11,26 +11,8 @@ import Projects from './(components)/projects';
 import Tech from './(components)/tech';
 
 export default function Home() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Muhammad Hafiz Ardiansyah',
-    alternateName: 'Hafiz Ardiansyah',
-    url: 'https://hafizardiansyah.my.id',
-    jobTitle: 'Frontend Developer',
-    headline: 'Frontend Developer specializing in React, Next.js, and Laravel',
-    sameAs: [
-      'https://github.com/hafizardiansyah',
-      'https://www.linkedin.com/in/muhammad-hafiz-ardiansyah',
-    ],
-  };
-
   return (
     <>
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <div className='flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black'>
         <main className='flex min-h-screen w-full max-w-7xl flex-col items-center justify-between py-16 md:py-32 px-8 md:px-16 bg-white dark:bg-black sm:items-start gap-16 md:gap-36'>
           <Introduction />

@@ -73,50 +73,52 @@ export default function Projects() {
   ];
 
   return (
-    <div className='space-y-5 w-full pb-10'>
-      <div className=''>PROJECTS</div>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
-        {projects.map((project, index) => {
-          const hasLink = !!project.link;
-          const content = (
-            <CardContent className='flex flex-col justify-between gap-5 px-3'>
-              <div className='flex flex-col gap-2'>
-                <div className='flex gap-2 items-center'>
-                  <div className='text-sm flex-1 font-semibold'>
-                    {project.name}
+    <section aria-labelledby='projects-heading'>
+      <div className='space-y-5 w-full pb-10'>
+        <h2>PROJECTS</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+          {projects.map((project, index) => {
+            const hasLink = !!project.link;
+            const content = (
+              <CardContent className='flex flex-col justify-between gap-5 px-3'>
+                <div className='flex flex-col gap-2'>
+                  <div className='flex gap-2 items-center'>
+                    <div className='text-sm flex-1 font-semibold'>
+                      {project.name}
+                    </div>
+                  </div>
+                  <div className='text-sm line-clamp-2'>
+                    {project.description}
                   </div>
                 </div>
-                <div className='text-sm line-clamp-2'>
-                  {project.description}
+                <div className='flex gap-0.5 items-center text-sm font-light'>
+                  {project.flag}
                 </div>
-              </div>
-              <div className='flex gap-0.5 items-center text-sm font-light'>
-                {project.flag}
-              </div>
-            </CardContent>
-          );
+              </CardContent>
+            );
 
-          return (
-            <MotionCard
-              className={cn(
-                'rounded-1 py-3',
-                hasLink && 'cursor-pointer' // hanya pointer kalau ada link
-              )}
-              whileHover={{ scale: 1.03, y: -4 }}
-              whileTap={{ scale: 0.99 }}
-              key={index}
-            >
-              {hasLink ? (
-                <Link href={project.link!} target='_blank' rel='noreferrer'>
-                  {content}
-                </Link>
-              ) : (
-                content
-              )}
-            </MotionCard>
-          );
-        })}
+            return (
+              <MotionCard
+                className={cn(
+                  'rounded-1 py-3',
+                  hasLink && 'cursor-pointer' // hanya pointer kalau ada link
+                )}
+                whileHover={{ scale: 1.03, y: -4 }}
+                whileTap={{ scale: 0.99 }}
+                key={index}
+              >
+                {hasLink ? (
+                  <Link href={project.link!} target='_blank' rel='noreferrer'>
+                    {content}
+                  </Link>
+                ) : (
+                  content
+                )}
+              </MotionCard>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

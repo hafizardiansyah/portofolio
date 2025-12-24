@@ -3,7 +3,7 @@ import TypingText from '@/components/ui/shadcn-io/typing-text';
 export default function Introduction() {
   return (
     <div className='space-y-10 max-w-4xl pb-10'>
-      <div className='text-sm'>FRONTEND DEVELOPER</div>
+      <h1>MUHAMMAD HAFIZ ARDIANSYAH | FRONTEND DEVELOPER</h1>
       <TypingText
         text={[
           "Hello, I'm Hafiz.",
